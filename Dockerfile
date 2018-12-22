@@ -1,13 +1,13 @@
-FROM node:8
+FROM node:10-alpine
 
-WORKDIR /usr/scr/app
+RUN mkdir /opt/positiveplus
 
-COPY package*.json ./
+WORKDIR /opt/positiveplus
+
+COPY app ./
 
 RUN npm install
 
-COPY . .
-
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["npm", "start"]
