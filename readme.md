@@ -1,3 +1,3 @@
-Pull
-slt l'equipe . j'espere  vous etes b1 
-merci
+Pull all branches
+
+start working on your branch, don't forget to checkout.
