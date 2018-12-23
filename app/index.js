@@ -2,7 +2,7 @@ import express from 'express';
 const app = express();
 import bodyParser from 'body-parser';
 import {adminRouter} from './routes/adminRouter'
-import {articleRouter} from './routes/activityRouter'
+import {groupeRouter} from './routes/groupeRouter'
 import {userRouter} from './routes/userRouter'
 import mongoose from 'mongoose'
 
@@ -14,9 +14,12 @@ mongoose.connect('mongodb://localhost/TCdb',{
     useNewUrlParser: true
 })
 
-app.use('/admin',adminRouter)
 app.use('/user',userRouter)
-app.use('/activity',activityeRouter)
+app.use('/activity',activityRouter)
+app.use('/defi',defiRouter)
+app.use('/groupe',groupeRouter)
+
+
 
 
 app.listen(3000);

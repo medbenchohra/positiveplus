@@ -2,16 +2,19 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-import DefitSchema from './Defit'
+import DefiSchema from './Defi'
+import TodoSchema from './TodoList'
+import GroupeSchema  from './Groupe';
+
 const UserSchema = new Schema({
-    first_name : {
+    name : {
         type: String,
-        required : 'firstname is requried'
+        required : 'name is requried'
     },
 
-    last_name : {
+    pseudo : {
         type: String,
-        required : 'lastname is requried'
+        required : 'pseudo is requried'
     },
 
     email : {
@@ -23,9 +26,16 @@ const UserSchema = new Schema({
     Created_date: {
         type: Date,
         default: Date.now
-    }
+    },
     
-    defits : [DefiSchema]
+    defis : {type : DefiSchema}  ,
+    //defi : [DefiSchema]
+
+    groupes :   { type : GroupeSchema } ,
+
+    todoList : { 
+        type : TodoSchema 
+    }
   
 
 });

@@ -8,9 +8,9 @@ import {addUser,
         deleteUser} from "../controllers/userController"
 
 
-userRouter.post('/',addUser);
-userRouter.get('/',getUser);
-userRouter.put('/',updateUser);
-userRouter.delete('/?idUser',deleteUser);
+userRouter.post('/:idUser',addUser);
+userRouter.get('/:idUser',getUser);
+userRouter.put('/:idUser',updateUser);
+userRouter.delete('/:idUser',deleteUser);
 
 export {userRouter};

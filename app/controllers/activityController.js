@@ -7,7 +7,7 @@ const Activity = mongoose.model('Activity',ActivitySchma);
 const getActivity = (req, res) => {
     
     if(err) res.send(err)
-    resolveSoa.json(acrivities)
+    res.json(acrivities)
 }
 
 const addActiviy = (req,res)=>{
