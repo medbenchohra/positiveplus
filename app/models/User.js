@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
 const Schema = mongoose.Schema;
 
@@ -15,16 +16,20 @@ const UserSchema = new Schema({
 
     email : {
         type: String,
-        required : 'lastname is requried'
+        unique:true,
+        required : 'email is requried'
     },
 
-    Age : Number, 
-
+    password : {
+        type : String,
+        required: true
+    },
 
     Created_date: {
         type: Date,
         default: Date.now
     }
 });
+
 
 export {UserSchema};
