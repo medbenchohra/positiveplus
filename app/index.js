@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
 
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/PPdb',{
+mongoose.connect('mongodb://localhost:27017/PPdb',{
     useNewUrlParser: true
 })
 
